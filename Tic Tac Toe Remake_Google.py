@@ -14,19 +14,21 @@ ecran = pygame.display.set_mode((height,width))
 pygame.display.set_caption("Tic Tac Toe #Remake_Google")
 ecran.fill(couleur_ecran_cyan)
 
-jeu_en_cours = Truee
+jeu_en_cours = True
 
 #Initialisation des fonctions
 
 def grille ():
-    for raw in range(1,3):
-        for column in range (1,3):
-            pygame.draw.line(ecran,couleur_raw_cyan,(180+raw*150,column*100),(180+raw*150,column*700),10)
-            pygame.draw.line(ecran,couleur_raw_cyan,(raw*100,180+column*150),(raw*700,180+column*150),10)
-
-
-
+    #Barre verticale
+    pygame.draw.line(ecran,couleur_raw_cyan,(300,100),(300,700),10)
+    pygame.draw.line(ecran,couleur_raw_cyan,(500,100),(500,700),10)
+    #Barre horizontale
+    pygame.draw.line(ecran,couleur_raw_cyan,(100,300),(700,300),10)
+    pygame.draw.line(ecran,couleur_raw_cyan,(100,500),(700,500),10)
 grille()
+
+
+
 
 while jeu_en_cours:
     for event in pygame.event.get():
