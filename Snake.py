@@ -77,8 +77,9 @@ class Snake:
             #creer le serpent
             Green = (0, 255, 0)
             P_snake=pygame.draw.rect(self.ecran, Green, (self.snake_position_x, self.snake_position_y, 5, 5))
+            print(P_snake)
 
-            # creer la limite
+            #creer la limite
 
             self.limite()
 
@@ -110,6 +111,7 @@ class Snake:
 
             for taille_serpent in self.snake_taille:
                 pygame.draw.rect(self.ecran, Green, (taille_serpent[0],taille_serpent[1],self.pomme_taille,self.pomme_taille))
+                print(taille_serpent)
 
 
             if len(self.snake_taille) > self.grandeur:
@@ -130,7 +132,7 @@ class Snake:
         pygame.draw.rect(self.ecran, (255,0,0), (0, 0, 800, 600),3)
 
 
-# cette instance permert d'initialiser les focntions de pygame, d'appeler la fonction principale de la class Snake , et enfin quitter pygame
+# cette instance permert d'initialiser les fonctions de pygame, d'appeler la fonction principale de la class Snake , et enfin quitter pygame
 if __name__ == '__main__':
 
     pygame.init()
