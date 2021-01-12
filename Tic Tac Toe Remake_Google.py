@@ -14,7 +14,7 @@ ecran = pygame.display.set_mode((height,width))
 pygame.display.set_caption("Tic Tac Toe #Remake_Google")
 ecran.fill(couleur_ecran_cyan)
 
-jeu_en_cours = True
+jeu_en_cours = Truee
 
 #Initialisation des fonctions
 
